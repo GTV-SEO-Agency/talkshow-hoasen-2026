@@ -502,6 +502,27 @@
   .spk .statcard{padding:20px 28px;}
   .spk .bigstat .num.sm{font-size:58px;}
   .spk .bigstat .lab{font-size:22px; margin-top:6px;}
+  /* v5: GEO bao gồm AEO, KPI song ngữ */
+  .nest{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
+  .nest .ni{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.38); border-radius:16px; padding:18px 22px; font-size:23px; color:rgba(255,255,255,.9); line-height:1.4;}
+  .nest .ni b{display:block; font-size:28px; color:#fff; margin:6px 0 4px;}
+  .nest .nk{font-family:var(--mono); font-size:16px; letter-spacing:.12em; text-transform:uppercase; font-weight:600; color:rgba(255,255,255,.85);}
+  .step h3 small,.fx h3 small{display:block; font-size:23px; font-weight:600; color:var(--faint); margin-top:4px;}
+  .step.on h3 small{color:rgba(255,255,255,.85);}
+  .fxg.g4{grid-template-columns:repeat(4,1fr); gap:18px;}
+  .fxg.g4 .fx{padding:22px 24px;}
+  .fxg.g4 .fx h3{font-size:28px; margin:8px 0 8px;}
+  .fxg.g4 .fx h3 small{font-size:21px;}
+  .fxg.g4 .fx p{font-size:23px;}
+  table.kpit td.k small{display:block; font-size:19px; color:var(--faint); font-weight:600; margin-top:2px;}
+  table.kpit.tight{border-spacing:0 8px;}
+  table.kpit.tight td{padding:14px 24px; font-size:25px;}
+  .fxg.g5{grid-template-columns:repeat(5,1fr); gap:16px;}
+  .fxg.g5 .fx{padding:20px 20px;}
+  .fxg.g5 .fx h3{font-size:25px; margin:8px 0 8px;}
+  .fxg.g5 .fx h3 small{font-size:19px;}
+  .fxg.g5 .fx p{font-size:21px;}
+  .step p.kl{line-height:1.55;}
 </style>
 </head>
 <body>
@@ -584,7 +605,7 @@
           <div class="ncard rise" style="padding:34px 30px; min-height:260px;"><div class="n">04</div><h3 style="font-size:32px;">Đo lường GEO: KPI và công cụ</h3></div>
           <div class="ncard rise" style="padding:34px 30px; min-height:260px;"><div class="n">05</div><h3 style="font-size:32px;">Bonus: agentic workflow cho SEO &amp; GEO</h3></div>
         </div>
-        <div class="band light">Mang về: <b>hiểu người dùng tìm kiếm với AI</b> · <b>phân biệt SEO, AEO, GEO</b> · <b>bộ KPI đo GEO</b> · <b>cách dùng AI agents trong nghề</b></div>
+        <div class="band light">Mang về: <b>hiểu người dùng tìm kiếm với AI</b> · <b>hiểu SEO và GEO</b> · <b>bộ KPI đo GEO</b> · <b>cách dùng AI agents trong nghề</b></div>
       </div>
     </div>
   </section>
@@ -894,14 +915,18 @@
   <section data-label="SEO · AEO · GEO">
     <div class="slide">
       <div class="eyebrow">Phần 2 · Khái niệm và cơ chế</div>
-      <h2 class="stitle">Ba khái niệm, <span class="grad">ba mục tiêu</span></h2>
+      <h2 class="stitle">SEO, AEO, GEO: <span class="grad">thật ra là hai việc</span></h2>
       <div class="midwrap">
-        <div class="row" style="grid-template-columns:repeat(3,1fr); align-items:end;">
-          <div class="ncard rise" style="min-height:330px;"><div class="n">SEO</div><h3>Được tìm thấy</h3><p>Xếp hạng trên trang kết quả của Google và các công cụ tìm kiếm.</p></div>
-          <div class="ncard rise" style="min-height:380px;"><div class="n">AEO</div><h3>Được chọn làm câu trả lời</h3><p>Answer Engine Optimization: featured snippet, trợ lý giọng nói, đoạn trích trong AI Overviews.</p></div>
-          <div class="ncard on rise" style="min-height:430px;"><div class="n">GEO</div><h3>Được AI nhắc tên và trích dẫn</h3><p>Generative Engine Optimization: xuất hiện trong câu trả lời của ChatGPT, Gemini, AI Mode, Perplexity.</p></div>
+        <div class="row" style="grid-template-columns:1fr 1.8fr; gap:26px;">
+          <div class="ncard rise"><div class="n">SEO</div><h3>Được tìm thấy</h3><p>Search Engine Optimization: xếp hạng trên trang kết quả của Google và các công cụ tìm kiếm. Người dùng bấm vào website.</p></div>
+          <div class="ncard on rise"><div class="n">GEO</div><h3>Được AI chọn, nhắc tên và trích dẫn</h3><p>Generative Engine Optimization: xuất hiện trong câu trả lời của ChatGPT, Gemini, AI Mode, AI Overviews, Perplexity.</p>
+            <div class="nest">
+              <div class="ni"><span class="nk">AEO · nằm trong GEO</span><b>AI trích thẳng một đáp án</b>featured snippet, trợ lý giọng nói, đoạn trích có sẵn đáp án</div>
+              <div class="ni"><span class="nk">Phần GEO mở rộng</span><b>AI tổng hợp, suy luận</b>ghép dữ kiện từ nhiều nguồn khi không có sẵn đáp án</div>
+            </div>
+          </div>
         </div>
-        <p class="src-note">Trong ngành, AEO và GEO thường được dùng thay cho nhau. GTV dùng GEO làm tên gọi chung.</p>
+        <p class="src-note">AEO, GEO, LLMO, AI SEO: nhiều tên gọi cho cùng một mục tiêu. GTV dùng GEO làm tên chung, bao gồm cả AEO. Thuật ngữ GEO: Aggarwal và cộng sự, Princeton, 11/2023.</p>
       </div>
     </div>
   </section>
@@ -1249,14 +1274,15 @@
   <section data-label="Bộ KPI mới">
     <div class="slide">
       <div class="eyebrow">Phần 4 · Đo lường GEO</div>
-      <h2 class="stitle">Bộ KPI mới: <span class="grad">3 tầng</span></h2>
+      <h2 class="stitle">GEO KPIs: <span class="grad">3 tầng</span></h2>
       <div class="midwrap">
         <div class="steps" style="grid-template-columns:repeat(3,1fr);">
-          <div class="step rise"><div class="sn">1</div><h3>Hiện diện trong AI</h3><p>Tỷ lệ được nhắc tên · số lần được trích dẫn · <b>AI Share of Voice</b> so với đối thủ. Đo riêng từng công cụ AI.</p></div>
-          <div class="step rise"><div class="sn">2</div><h3>Traffic và chất lượng</h3><p>Session từ kênh <b>AI Assistant</b> · tỷ lệ chuyển đổi từ AI so với organic.</p></div>
-          <div class="step on rise"><div class="sn">3</div><h3>Kinh doanh</h3><p>Lead và doanh thu từ AI · lượng tìm kiếm tên thương hiệu.</p></div>
+          <div class="step rise"><div class="sn">1</div><h3>Visibility<small>Hiện diện trong AI</small></h3><p class="kl"><b>Brand Mention Rate</b> · <b>Citation Rate</b> · <b>AI Share of Voice</b> · <b>AIO Keywords</b> · <b>Generative AI Impressions</b> · <b>Information Accuracy</b>. Đo riêng ChatGPT và Google AI.</p></div>
+          <div class="step rise"><div class="sn">2</div><h3>Traffic &amp; Quality<small>Traffic và chất lượng</small></h3><p><b>AI Referral Sessions</b> · <b>AI CVR</b> so với <b>Organic CVR</b>, đọc trên GA4.</p></div>
+          <div class="step on rise"><div class="sn">3</div><h3>Business Impact<small>Kết quả kinh doanh</small></h3><p><b>AI-sourced Leads, Revenue</b> · <b>Branded Search Volume</b>.</p></div>
         </div>
-        <div class="band light">Vẫn giữ KPI SEO nền: <b>index · ranking · organic traffic</b></div>
+        <div class="band light">Vẫn giữ KPI SEO nền: <b>Indexed Pages · Keyword Rankings · Organic Traffic</b></div>
+        <div class="band">GEO đang phát triển rất nhanh. Cách đo hiệu quả GEO sẽ còn cải thiện theo thời gian, nên bộ KPI cũng phải theo dõi và cập nhật thường xuyên.</div>
       </div>
     </div>
   </section>
@@ -1265,17 +1291,21 @@
   <section data-label="Công thức chỉ số GEO">
     <div class="slide">
       <div class="eyebrow">Phần 4 · Cách tính</div>
-      <h2 class="stitle">Sáu chỉ số GEO và <span class="grad">cách tính</span></h2>
+      <h2 class="stitle">Bộ chỉ số GEO và <span class="grad">cách tính</span></h2>
       <div class="midwrap">
-        <div class="fxg">
-          <div class="fx rise"><span class="fk">Tầng 1 · Hiện diện</span><h3>Tỷ lệ được nhắc tên</h3><p>số câu trả lời có tên thương hiệu ÷ tổng số câu trả lời</p></div>
-          <div class="fx rise"><span class="fk">Tầng 1 · Hiện diện</span><h3>Tỷ lệ được trích dẫn</h3><p>số câu trả lời có link về website ÷ tổng số câu trả lời</p></div>
-          <div class="fx rise"><span class="fk">Tầng 1 · Hiện diện</span><h3>AI Share of Voice</h3><p>lượt nhắc thương hiệu ÷ tổng lượt nhắc của bạn và đối thủ</p></div>
-          <div class="fx rise"><span class="fk">Tầng 1 · Hiện diện</span><h3>Vị trí và sắc thái</h3><p>đứng thứ mấy trong danh sách AI đưa ra · được nhắc tích cực hay tiêu cực</p></div>
-          <div class="fx p rise"><span class="fk">Tầng 2 · Traffic</span><h3>Chuyển đổi từ AI</h3><p>tỷ lệ chuyển đổi kênh AI Assistant ÷ tỷ lệ chuyển đổi organic, trên GA4</p></div>
-          <div class="fx p rise"><span class="fk">Tầng 3 · Kinh doanh</span><h3>Tìm kiếm tên thương hiệu</h3><p>lượt tìm tên thương hiệu trên Search Console, so với kỳ trước</p></div>
+        <div class="fxg g5">
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>Brand Mention Rate<small>tỷ lệ được nhắc tên</small></h3><p>câu trả lời có tên thương hiệu ÷ tổng câu trả lời</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>Citation Rate<small>tỷ lệ được trích dẫn</small></h3><p>câu trả lời có link về website ÷ tổng câu trả lời</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>AI Share of Voice<small>thị phần hiện diện</small></h3><p>lượt nhắc thương hiệu ÷ tổng lượt nhắc của bạn và đối thủ</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>AIO Keywords<small>tổng số AIO trích website</small></h3><p>số từ khoá có AI Overviews trích dẫn website · Semrush, Ahrefs</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>Generative AI Impressions<small>lượt hiển thị GEO trên GSC</small></h3><p>lượt hiển thị trong AI Overviews, AI Mode · báo cáo Generative AI của Search Console</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>Information Accuracy<small>độ chính xác thông tin</small></h3><p>câu trả lời mô tả đúng ÷ câu trả lời có nhắc thương hiệu</p></div>
+          <div class="fx rise"><span class="fk">1 · Visibility</span><h3>Position &amp; Sentiment<small>vị trí và sắc thái</small></h3><p>đứng thứ mấy trong danh sách · AI đề xuất, so sánh hay chê</p></div>
+          <div class="fx p rise"><span class="fk">2 · Traffic</span><h3>AI Referral Sessions<small>phiên truy cập từ AI</small></h3><p>session kênh AI Assistant trên GA4: chatgpt.com, gemini.google.com…</p></div>
+          <div class="fx p rise"><span class="fk">2 · Traffic</span><h3>AI CVR vs Organic CVR<small>chuyển đổi AI so với organic</small></h3><p>tỷ lệ chuyển đổi kênh AI Assistant ÷ tỷ lệ chuyển đổi Organic Search</p></div>
+          <div class="fx p rise"><span class="fk">3 · Business</span><h3>Branded Search Volume<small>lượt tìm tên thương hiệu</small></h3><p>lượt tìm tên thương hiệu trên Search Console, so với kỳ trước</p></div>
         </div>
-        <div class="band light">Ví dụ: 30 prompt × 5 lần chạy = 150 câu trả lời. Thương hiệu có mặt trong 45 câu → tỷ lệ được nhắc tên <b>30%</b>.</div>
+        <div class="band light">Ví dụ: 30 prompt × 3 lần chạy = 90 câu trả lời. Thương hiệu có mặt trong 27 câu → <b>Brand Mention Rate 30%</b>.</div>
       </div>
     </div>
   </section>
@@ -1288,14 +1318,14 @@
         <div class="lt">
           <h2 class="stitle">Đo AI như <span class="grad">thăm dò dư luận</span>, không như xếp hạng</h2>
           <div class="cred">
-            <div class="ci"><span class="dot"></span><p>Đo trên <b>20–40 prompt</b>, mỗi prompt chạy khoảng <b>5 lần</b>.</p></div>
+            <div class="ci"><span class="dot"></span><p>Đo trên <b>20–40 prompt</b>, mỗi prompt chạy <b>ít nhất 3 lần</b>. Ghi tỷ lệ, không ghi một lần chạy.</p></div>
             <div class="ci"><span class="dot"></span><p>Đo <b>hằng tuần</b>: nguồn được trích dẫn thay đổi nhanh.</p></div>
-            <div class="ci"><span class="dot"></span><p>Đo <b>riêng từng công cụ</b>: chỉ 2,37% URL được cả 3 công cụ AI cùng trích dẫn.</p></div>
+            <div class="ci"><span class="dot"></span><p>Đo <b>riêng từng công cụ</b>, bắt buộc ChatGPT và Google AI. Chỉ 2,37% URL được cả 3 công cụ AI cùng trích dẫn.</p></div>
           </div>
         </div>
         <div class="split">
-          <div class="lcol rise"><div class="lk">Miễn phí · bắt đầu từ đây</div><ul><li><b>Google Search Console</b>: báo cáo Generative AI</li><li><b>GA4</b>: nhóm kênh AI Assistant</li><li><b>Sổ log prompt</b> trên Google Sheet</li></ul></div>
-          <div class="lcol p rise"><div class="lk">Trả phí</div><ul><li><b>Ahrefs</b>: Brand Radar, AI responses</li><li><b>Semrush</b></li><li><b>Similarweb</b></li><li><b>Profound</b></li></ul></div>
+          <div class="lcol rise"><div class="lk">Miễn phí · bắt đầu từ đây</div><ul><li><b>Google Search Console</b>: báo cáo Generative AI</li><li><b>GA4</b>: kênh AI Assistant</li><li><b>Microsoft Clarity</b>: AI Citations</li><li><b>Prompt log</b> trên Google Sheet</li></ul></div>
+          <div class="lcol p rise"><div class="lk">Trả phí</div><ul><li><b>Ahrefs</b>: Brand Radar, AI responses</li><li><b>Semrush</b></li><li><b>SE Ranking</b></li><li><b>Profound</b></li></ul></div>
         </div>
       </div>
     </div>
@@ -1305,19 +1335,21 @@
   <section data-label="Bảng theo dõi GEO">
     <div class="slide">
       <div class="eyebrow">Phần 4 · Bắt đầu từ một bảng tính</div>
-      <h2 class="stitle">Bảng theo dõi GEO <span class="grad">hằng tháng</span></h2>
+      <h2 class="stitle">GEO Tracking Sheet: <span class="grad">theo dõi hằng tháng</span></h2>
       <div class="midwrap">
-        <table class="kpit rise">
-          <thead><tr><th>Tầng</th><th>Chỉ số</th><th>Lấy số ở đâu</th><th>Đo khi nào</th></tr></thead>
+        <table class="kpit tight rise">
+          <colgroup><col style="width:17%"><col style="width:44%"><col style="width:26%"><col style="width:13%"></colgroup>
+          <thead><tr><th>Tầng</th><th>KPI</th><th>Lấy số ở đâu</th><th>Đo khi nào</th></tr></thead>
           <tbody>
-            <tr><td class="k">Nền SEO</td><td>Index · xếp hạng · organic traffic</td><td>Google Search Console</td><td>Hằng tuần</td></tr>
-            <tr><td class="k">1 · Hiện diện</td><td>Tỷ lệ nhắc tên · trích dẫn · AI Share of Voice</td><td>Sổ log prompt · Ahrefs Brand Radar</td><td>Hằng tuần</td></tr>
-            <tr><td class="k">1 · Hiện diện</td><td>Lượt hiển thị trong câu trả lời AI</td><td>Search Console · báo cáo Generative AI</td><td>Hằng tháng</td></tr>
-            <tr><td class="k">2 · Traffic</td><td>Session AI Assistant · chuyển đổi so với organic</td><td>GA4 · nhóm kênh AI Assistant</td><td>Hằng tháng</td></tr>
-            <tr><td class="k">3 · Kinh doanh</td><td>Lead, doanh thu từ AI · tìm kiếm tên thương hiệu</td><td>CRM · Search Console</td><td>Hằng tháng</td></tr>
+            <tr><td class="k">SEO Foundation<small>nền SEO</small></td><td>Indexed Pages · Keyword Rankings · Organic Traffic</td><td>Google Search Console</td><td>Hằng tuần</td></tr>
+            <tr><td class="k">1 · Visibility<small>hiện diện</small></td><td>Brand Mention Rate · Citation Rate · AI Share of Voice</td><td>Prompt log · Ahrefs Brand Radar</td><td>Hằng tuần</td></tr>
+            <tr><td class="k">1 · Visibility<small>hiện diện</small></td><td>Information Accuracy · Position &amp; Sentiment</td><td>Prompt log</td><td>Hằng tháng</td></tr>
+            <tr><td class="k">1 · Visibility<small>hiện diện</small></td><td>AIO Keywords · Generative AI Impressions</td><td>Semrush, Ahrefs · Search Console (Generative AI)</td><td>Hằng tháng</td></tr>
+            <tr><td class="k">2 · Traffic<small>traffic</small></td><td>AI Referral Sessions · AI CVR vs Organic CVR</td><td>GA4 · kênh AI Assistant</td><td>Hằng tháng</td></tr>
+            <tr><td class="k">3 · Business<small>kinh doanh</small></td><td>AI-sourced Leads, Revenue · Branded Search Volume</td><td>CRM · Search Console</td><td>Hằng tháng</td></tr>
           </tbody>
         </table>
-        <div class="band light">Bắt đầu miễn phí với <b>Google Sheet, Search Console và GA4</b>. Công cụ trả phí giúp đo nhanh hơn khi theo dõi nhiều đối thủ.</div>
+        <div class="band light">Bắt đầu miễn phí: <b>Google Sheet, Search Console, GA4</b>.</div>
       </div>
     </div>
   </section>
@@ -1566,8 +1598,7 @@
       <div class="midwrap" style="align-items:center; gap:30px;">
         <div class="eyebrow" style="margin-bottom:0; padding-right:0;">Từ SEO đến AEO &amp; GEO</div>
         <h2 class="mega">Cảm ơn thầy cô và các bạn.</h2>
-        <p class="hero-sub" style="text-align:center; font-size:36px;">Mời chuyển sang phần toạ đàm và hỏi đáp.</p>
-        <p class="hero-by" style="margin-top:4px; text-align:center;">Checklist GEO bản dành cho sinh viên sẽ gửi qua Khoa sau buổi chia sẻ.<br><b>Vincent Do</b> · gtvseo.com · theaigrowth.io · facebook.com/gtvseo · YouTube @VincentDoAI</p>
+        <p class="hero-by" style="margin-top:4px; text-align:center;"><b>Vincent Do</b> · gtvseo.com · theaigrowth.io · facebook.com/gtvseo · YouTube @VincentDoAI</p>
       </div>
     </div>
   </section>
